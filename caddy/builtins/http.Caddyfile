@@ -10,3 +10,11 @@ reverse_proxy {
 	to {$SRC_FRONTEND_ADDRESSES}
 	trusted_proxies 0.0.0.0/0
 }
+
+log {
+	output stdout
+	format json {
+		time_format iso8601
+	}
+	level INFO
+}
